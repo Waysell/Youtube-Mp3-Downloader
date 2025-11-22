@@ -50,8 +50,8 @@ def download(url,path):
         lbl_download['text'] = 'Download Started'
         with yt_dlp.YoutubeDL(current_opts) as ydl:
             ydl.download([url])
-            messagebox.showinfo('Success','Download Completed')
             lbl_download['text'] = 'Download Finished'
+            messagebox.showinfo('Success','Download Completed')
             
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred:\n{e}")       
